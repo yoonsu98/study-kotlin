@@ -57,6 +57,7 @@ allOpen {
 	annotation("jakarta.persistence.Embeddable")
 }
 
+//JVM 버전 세팅
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 	kotlinOptions {
 		jvmTarget = "21"
