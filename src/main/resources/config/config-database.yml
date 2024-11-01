@@ -1,0 +1,24 @@
+spring:
+  config:
+    activate:
+      on-profile: "database"
+
+  # ** MySQL  **
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ybc?allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: root
+    password: yoonsu1234
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 10
+
+  # ** JPA  **
+  jpa:
+    open-in-view: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: false
+        format_sql: true
+        default_schema: ybc

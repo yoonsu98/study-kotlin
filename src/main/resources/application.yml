@@ -1,0 +1,11 @@
+spring:
+  application:
+    name:
+      kotlin
+  config:
+    import:
+      - classpath:/config/config-database.yml
+  profiles:
+    active: local
+    group:
+      "local": "database"
